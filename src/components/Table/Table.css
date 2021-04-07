@@ -1,0 +1,134 @@
+.Table {
+    position: absolute;
+    width: 69%;
+    height: 98%;
+    /* background-color: black; */
+    right: 5px;
+    top:5px;
+    border: 1px solid black;
+    box-shadow: 5px 10px 20px black;
+    overflow: auto;
+}
+.Table input {
+    display: flex;
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 2px solid black;
+    margin-top: -1px;
+}
+.Table h2 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #008080;
+    user-select: none;
+
+}
+.Table h2:hover {
+    cursor: pointer;
+}
+.Table h3 {
+    font-size: 20px;
+    font-family: sans-serif;
+    user-select: none;
+
+}
+.Table h4 {
+    font-size: 18px;
+    font-family: unset;
+    user-select: none;
+}
+.Tablelists {
+    /* margin-right: 10px; */
+    margin-left: 35px;
+    margin-top: 50px;
+    margin-bottom:10px
+}
+.Tablelists div {
+    display: inline-block;
+    width: 400px;
+    height:300px;
+    border: 1px solid black;
+    margin-right: 60px;
+    margin-top: 30px;
+    box-shadow: 1px 2px 5px black;
+    padding: 20px;
+}
+
+.Favatr {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 145px;
+    color: teal;
+    user-select: none;
+}
+
+.Favatr:hover {
+    cursor: pointer;
+}
+.Favatr:active{
+    color: blue;
+}
+.Favatr:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.Tablelists div:hover {
+    box-shadow: 5px 10px 20px black;
+}
+.Star {
+    display: inline-block;
+    width: 90px;
+    height:30px;
+    background-color: #ccc;
+    margin-top: 60px;
+    margin-right: 15px;
+    border-radius: 1.1em;
+    user-select: none;
+}
+.Star p {
+    float: left;
+    margin-left: 12px;
+    margin-top: 3px; 
+}
+.Star:hover {
+    cursor: pointer;
+    background-color: #008080;
+}
+.Star img {
+    float: left;
+    margin-left: 12px;
+    margin-top: 6px;    
+}
+.Eye {
+    display: inline-block;
+    width: 90px;
+    height:30px;
+    background-color:#ccc;
+    margin-left: 15px;
+    border-radius: 1.1em;
+}
+.Eye:hover {
+    cursor: pointer;
+    background-color: #008080;
+}
+.Eye img {
+    float: left;
+    margin-left: 12px;
+    margin-top: 6px
+}
+.Eye p {
+    float: left;
+    margin-left: 12px;
+    margin-top: 3px; 
+}
+.Fav {
+    display: flex;
+    float: right;
+    margin-top: -116px;
+    margin-right: -20px;
+    cursor: pointer;
+}
+

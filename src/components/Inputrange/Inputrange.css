@@ -1,0 +1,19 @@
+.Inputrange input {
+  margin-top: 1px;
+  box-shadow: 3px 3px 3px black;
+  border: 2px solid #83E584;
+  height: 23px;
+  width: 100%;
+  border-radius: 23px;
+  background: #439643;
+  cursor: pointer;
+}
+
+.Span{
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column-reverse;
+  user-select: none;
+}
+
+
