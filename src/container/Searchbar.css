@@ -12,8 +12,6 @@
     border: 1px solid black;
     box-shadow: 5px 10px 20px black;
     overflow: auto;
-    z-index: -1;
-    
 }
 .Tablelists {
     margin-top: 50px;
@@ -46,7 +44,7 @@
 }
 .Tablelists div {
     display: inline-block;
-    max-width: 400px;
+    width: 400px;
     height:300px;
     border: 1px solid black;
     margin-right: 40px;
@@ -132,5 +130,6 @@
     margin-right: -20px;
     cursor: pointer;
 }
+
 
 
