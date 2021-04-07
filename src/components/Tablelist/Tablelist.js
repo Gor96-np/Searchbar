@@ -9,7 +9,7 @@ const Favorite = React.memo(props => {
 
         <div className="Tablelists">
         { props.tables.map(key => (
-           <div key={key.id} className="Tableelem">
+           <div key={key.id} >
                 <h2 onClick={() => props.nameClick(key.id,key.name,key.lang)}>{key.name}</h2>
                 <h4>{key.owner}</h4>
                 <h3>{key.lang}</h3>

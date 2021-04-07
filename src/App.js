@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import Searchbar from './container/Searchbar'
+import Searchbar from './container/Searchbar';
 
 const App = () => {
     return (

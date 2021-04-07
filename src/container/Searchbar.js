@@ -4,12 +4,15 @@ import './Searchbar.css'
 import Form from '../components/Form/Form';
 import Tablelists from '../components/Tablelist/Tablelist';
 import { withRouter } from 'react-router-dom';
-import Search from '../components/Search/Search'
+import Search from '../components/Search/Search';
+import Spinner from '../components/Spinner/Spinner'
 
 const Searchbar = (props) => {
 
   const [ data,setData ] = useState([]);
   const [ favoritData,setfavoritData ] = useState([]);
+  const [ spin,setSpin ] = useState(false)
+
   
   useEffect(() => {
    fetch('https://react-task-838eb-default-rtdb.firebaseio.com/favdata/.json/')
@@ -71,9 +74,9 @@ const removeHandler = (id) => {
 setfavoritData(favoritData.filter(elem => elem.id !== id))}
 
   const filterHandler = useCallback(filterOptions => {
+    setSpin(true)
     setData(filterOptions)
   },[setData]);
-
   const nameClickHandler = (id,name,language) => {
     props.history.push(`/search&language=${language}&&name=${name}`)
   }
@@ -89,9 +92,13 @@ setfavoritData(favoritData.filter(elem => elem.id !== id))}
   },[data,filterHandler,])
 
   const table = useMemo(() => {
+   let elem = <Spinner />
+   if(spin) {
+     elem = <Search onLoadSearch={filterHandler}/>
+   }
     return (
       <div className="Table">
-      <Search onLoadSearch={filterHandler}/>
+      { elem }
       <Tablelists tables={data}
                     favClick={(id,name,owner,lang,star) => favoritHandler(id,name,owner,lang,star)}
                      nameClick={(id,name,lang) => nameClickHandler(id,name,lang)}
